@@ -1,0 +1,6 @@
+name = "Islandora ETDMS Download"
+description = "Utility module that provides an OAI-PMH download link for the ETDMS metadata prefix."
+version = 7.x-dev
+core = 7.x
+package = Islandora Tools
+dependencies[] = islandora_oai
