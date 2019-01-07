@@ -19,12 +19,17 @@ function islandora_etdms_download_islandora_oai_record_alter(&$oai_record, &$par
     $object=islandora_object_load($pid);
     $cmodel=$object->models;
     if (in_array('ir:thesisCModel', $object->models) || in_array('ir:citationCModel', $object->models)) {
-      global $base_url;
-      $fragment = "<identifier>" . $base_url . "/islandora/object/" . $pid . "/datastream/PDF/file.pdf</identifier>";
-      $frag = $dom->createDocumentFragment();
-      $frag->appendXML($fragment);
-      $dom->documentElement->appendChild($frag);
-      $oai_record = $dom->saveXML($dom->documentElement);
+      if (!$object->getDataStream('PDF')) {
+        return;
+      }
+      else {
+        global $base_url;
+        $fragment = "<identifier>" . $base_url . "/islandora/object/" . $pid . "/datastream/PDF/file.pdf</identifier>";
+        $frag = $dom->createDocumentFragment();
+        $frag->appendXML($fragment);
+        $dom->documentElement->appendChild($frag);
+        $oai_record = $dom->saveXML($dom->documentElement);
+      }
     }
   }
 }
