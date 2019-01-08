@@ -13,7 +13,7 @@ Install as usual, see [this](https://drupal.org/documentation/install/modules-th
 
 ## Configuration
 
-There are no configuration options.
+Just enable the module. Any OAI-PMH requests with the oai_etdms metadataPrefix will include an `<identifier>` element with a link to the PDF datastream. This link only appears for Thesis and Citation objects, and only if the PDF exists.
 
 ## Maintainer
 
