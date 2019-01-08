@@ -17,7 +17,7 @@ Just enable the module. Any OAI-PMH requests with the oai_etdms metadataPrefix w
 
 ![Screenshot](https://i.imgur.com/0STIZ9z.png)
 
-To confirm the module is working, make a GetRecord request on an object using the oai_etdms metadatPrefix: `(BASE_URL)/oai2?verb=GetRecord&identifier=(YOUR:PID)&metadataPrefix=oai_etdms`
+To confirm the module is working, make a GetRecord request on an object using the oai_etdms metadataPrefix: `(BASE_URL)/oai2?verb=GetRecord&identifier=(YOUR:PID)&metadataPrefix=oai_etdms`
 
 ## Maintainer
 
