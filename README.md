@@ -15,6 +15,8 @@ Install as usual, see [this](https://drupal.org/documentation/install/modules-th
 
 Just enable the module. Any OAI-PMH requests with the oai_etdms metadataPrefix will include an `<identifier>` element with a link to the PDF datastream. This link only appears for Thesis and Citation objects, and only if the PDF exists.
 
+![Screenshot](https://i.imgur.com/0STIZ9z.png)
+
 ## Maintainer
 
 * [Brandon Weigel](https://github.com/bondjimbond)
